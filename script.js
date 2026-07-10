@@ -26,3 +26,4 @@ document.getElementById('btn-quina').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(5, 80);
     document.getElementById('resultado-quina').innerText = resultado.join(' - ');
 });
+// Sorteio da Quina: 5 numeros de 1 a 80.
