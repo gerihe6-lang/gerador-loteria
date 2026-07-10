@@ -1,0 +1,38 @@
+// Função genérica para gerar números ordenados e sem repetição
+function gerarNumerosLoteria(quantidade, maximo) {
+    const numeros = [];
+    
+    while (numeros.length < quantidade) {
+        // Gera número aleatório entre 1 e o máximo permitido
+        const numeroAleatorio = Math.floor(Math.random() * maximo) + 1;
+        
+        // Verifica se o número já foi sorteado para evitar duplicados
+        if (!numeros.includes(numeroAleatorio)) {
+            numeros.push(numeroAleatorio);
+        }
+    }
+    
+    // Ordena os números em ordem crescente
+    return numeros.sort((a, b) => a - b);
+}
+
+// Configuração do sorteio da Mega-Sena
+document.getElementById('btn-mega').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(6, 60);
+    document.getElementById('resultado-mega').innerText = resultado.join(' - ');
+});
+// Configuração do sorteio da Quina
+document.getElementById('btn-quina').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(5, 80);
+    document.getElementById('resultado-quina').innerText = resultado.join(' - ');
+});
+// Sorteio da Quina: 5 numeros de 1 a 80.
+// Codigo da quina revisado e funcional
+// Configuração do sorteio da Lotofácil
+
+document.getElementById('btn-lotofacil').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(15, 25);
+    document.getElementById('resultado-lotofacil').innerText = resultado.join(' - ');
+});
+// Sorteio da Lotofacil: 15 numeros de 1 a 25.
+// Todos os jogos integrados com sucesso. Prontos para V1.0.
