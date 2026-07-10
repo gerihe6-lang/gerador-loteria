@@ -15,3 +15,9 @@ function gerarNumerosLoteria(quantidade, maximo) {
     // Ordena os números em ordem crescente
     return numeros.sort((a, b) => a - b);
 }
+
+// Configuração do sorteio da Mega-Sena
+document.getElementById('btn-mega').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(6, 60);
+    document.getElementById('resultado-mega').innerText = resultado.join(' - ');
+});
