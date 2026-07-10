@@ -34,3 +34,4 @@ document.getElementById('btn-lotofacil').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(15, 25);
     document.getElementById('resultado-lotofacil').innerText = resultado.join(' - ');
 });
+// Sorteio da Lotofacil: 15 numeros de 1 a 25.
