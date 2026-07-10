@@ -21,3 +21,8 @@ document.getElementById('btn-mega').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(6, 60);
     document.getElementById('resultado-mega').innerText = resultado.join(' - ');
 });
+// Configuração do sorteio da Quina
+document.getElementById('btn-quina').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(5, 80);
+    document.getElementById('resultado-quina').innerText = resultado.join(' - ');
+});
