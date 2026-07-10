@@ -28,3 +28,9 @@ document.getElementById('btn-quina').addEventListener('click', function() {
 });
 // Sorteio da Quina: 5 numeros de 1 a 80.
 // Codigo da quina revisado e funcional
+// Configuração do sorteio da Lotofácil
+
+document.getElementById('btn-lotofacil').addEventListener('click', function() {
+    const resultado = gerarNumerosLoteria(15, 25);
+    document.getElementById('resultado-lotofacil').innerText = resultado.join(' - ');
+});
