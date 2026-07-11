@@ -110,3 +110,10 @@ button:active {
     font-size: 1.1rem;
     color: var(--texto-claro);
 }
+.resultado {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    letter-spacing: 2px;
+}
