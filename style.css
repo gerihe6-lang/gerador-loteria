@@ -1,23 +1,137 @@
-/* Estilo rudimentar apenas para organização básica na v1.0 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
+
+/* Configurações de reset e variáveis de cores modernas */
+:root {
+    --bg-principal: #f4f7f6;
+    --bg-card: #ffffff;
+    --texto-escuro: #2d3748;
+    --texto-claro: #718096;
+    --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --borda-raio: 12px;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-escuro);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+hr {
+    display: none; /* Remove as linhas horizontais feias da V1 */
+}
+
+/* Container que envolve cada jogo (Transformados em Cards elegantes) */
 section {
+    background-color: var(--bg-card);
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-4px); /* Pequeno efeito de flutuação ao passar o mouse */
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+section p {
+    color: var(--texto-claro);
     margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 15px;
-    font-size: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.resultado {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+button:active {
+    transform: scale(0.98); /* Efeito visual de clique afundando */
 }
+/* Cor customizada para o botão da Mega-Sena (Verde Caixa) */
+#btn-mega {
+    background-color: #209869;
+}
+#btn-mega:hover {
+    background-color: #166c4b;
+}
+
+/* Cor customizada para o botão da Quina (Azul Caixa) */
+#btn-quina {
+    background-color: #260085;
+}
+#btn-quina:hover {
+    background-color: #1a005c;
+}
+
+/* Cor customizada para o botão da Lotofácil (Roxo/Rosa Caixa) */
+#btn-lotofacil {
+    background-color: #930089;
+}
+#btn-lotofacil:hover {
+    background-color: #690061;
+}
+.resultado {
+    margin-top: 25px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+}
+.resultado {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    letter-spacing: 2px;
+}
+/* Estilo das esferas individuais */
+.bola-loteria {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: inset -3px -3px 6px rgba(0,0,0,0.3), 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Cores específicas das bolinhas baseadas nos botões */
+.bola-mega { background-color: #209869; }
+.bola-quina { background-color: #260085; }
+.bola-loto { background-color: #930089; }
