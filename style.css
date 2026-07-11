@@ -99,3 +99,14 @@ button:active {
 #btn-lotofacil:hover {
     background-color: #690061;
 }
+.resultado {
+    margin-top: 25px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+}
