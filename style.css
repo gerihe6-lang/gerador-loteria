@@ -33,3 +33,31 @@ h1 {
 hr {
     display: none; /* Remove as linhas horizontais feias da V1 */
 }
+
+/* Container que envolve cada jogo (Transformados em Cards elegantes) */
+section {
+    background-color: var(--bg-card);
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-4px); /* Pequeno efeito de flutuação ao passar o mouse */
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+section p {
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+}
