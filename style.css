@@ -76,3 +76,26 @@ button {
 button:active {
     transform: scale(0.98); /* Efeito visual de clique afundando */
 }
+/* Cor customizada para o botão da Mega-Sena (Verde Caixa) */
+#btn-mega {
+    background-color: #209869;
+}
+#btn-mega:hover {
+    background-color: #166c4b;
+}
+
+/* Cor customizada para o botão da Quina (Azul Caixa) */
+#btn-quina {
+    background-color: #260085;
+}
+#btn-quina:hover {
+    background-color: #1a005c;
+}
+
+/* Cor customizada para o botão da Lotofácil (Roxo/Rosa Caixa) */
+#btn-lotofacil {
+    background-color: #930089;
+}
+#btn-lotofacil:hover {
+    background-color: #690061;
+}
