@@ -1,23 +1,35 @@
-/* Estilo rudimentar apenas para organização básica na v1.0 */
+/* ==========================================================================
+   INTEGRANTE 1: ESTRUTURA GLOBAL, CORES DO TEMA E TIPOGRAFIA
+   ========================================================================== */
+
+/* Configurações de reset e variáveis de cores modernas */
+:root {
+    --bg-principal: #f4f7f6;
+    --bg-card: #ffffff;
+    --texto-escuro: #2d3748;
+    --texto-claro: #718096;
+    --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --borda-raio: 12px;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-escuro);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section {
-    margin-bottom: 20px;
+h1 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.resultado {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+hr {
+    display: none; /* Remove as linhas horizontais feias da V1 */
 }
