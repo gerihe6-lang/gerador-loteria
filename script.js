@@ -16,22 +16,26 @@ function gerarNumerosLoteria(quantidade, maximo) {
     return numeros.sort((a, b) => a - b);
 }
 
-// Configuração do sorteio da Mega-Sena
+// Configuração do sorteio da Mega-Sena (Com bolinhas)
 document.getElementById('btn-mega').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(6, 60);
-    document.getElementById('resultado-mega').innerText = resultado.join(' - ');
+    document.getElementById('resultado-mega').innerHTML = resultado
+        .map(num => `<span class="bola-loteria bola-mega">${String(num).padStart(2, '0')}</span>`)
+        .join('');
 });
-// Configuração do sorteio da Quina
+
+// Configuração do sorteio da Quina (Com bolinhas)
 document.getElementById('btn-quina').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(5, 80);
-    document.getElementById('resultado-quina').innerText = resultado.join(' - ');
+    document.getElementById('resultado-quina').innerHTML = resultado
+        .map(num => `<span class="bola-loteria bola-quina">${String(num).padStart(2, '0')}</span>`)
+        .join('');
 });
-// Sorteio da Quina: 5 numeros de 1 a 80.
-// Codigo da quina revisado e funcional
-// Configuração do sorteio da Lotofácil
 
+// Configuração do sorteio da Lotofácil (Com bolinhas)
 document.getElementById('btn-lotofacil').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(15, 25);
+<<<<<<< HEAD
     document.getElementById('resultado-lotofacil').innerText = resultado.join(' - ');
 });
 // Sorteio da Lotofacil: 15 numeros de 1 a 25.
@@ -58,5 +62,9 @@ document.getElementById('btn-lotofacil').addEventListener('click', function() {
     const resultado = gerarNumerosLoteria(15, 25);
     document.getElementById('resultado-lotofacil').innerHTML = resultado
         .map(num => <span class="bola-loteria bola-loto">${String(num).padStart(2, '0')}</span>)
+=======
+    document.getElementById('resultado-lotofacil').innerHTML = resultado
+        .map(num => `<span class="bola-loteria bola-loto">${String(num).padStart(2, '0')}</span>`)
+>>>>>>> bbf653c (MUDANDO TUDO)
         .join('');
 });
